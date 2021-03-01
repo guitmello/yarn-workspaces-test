@@ -1,0 +1,34 @@
+{
+  "name": "yarn-work",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "react": "17.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@types/react": "17.0.2",
+    "@yarn-work/eslint-config": "*",
+    "husky": "^5.1.2",
+    "typescript": "4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
